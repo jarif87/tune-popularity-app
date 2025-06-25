@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predict Song Popularity</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="wrap">
+    <h1>Predict Song Popularity</h1>
+    <form method="post" action="{{ url_for('predict') }}" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            <input name="artist_familiarity" type="number" step="0.01" class="searchTerm" 
+                   placeholder="Artist Familiarity (0.0-1.0, e.g., 0.78)" value="0.78" required>
+        </div>
+        <div class="form-group">
+            <input name="artist_hotttnesss" type="number" step="0.01" class="searchTerm" 
+                   placeholder="Artist Hotttnesss (0.0-1.0, e.g., 0.57)" value="0.57" required>
+        </div>
+        <div class="form-group">
+            <input name="song_hotttnesss" type="number" step="0.01" class="searchTerm" 
+                   placeholder="Song Hotttnesss (0.0-1.0, e.g., 0.60)" value="0.60" required>
+        </div>
+        <div class="form-group">
+            <input name="year" type="number" class="searchTerm" 
+                   placeholder="Year (e.g., 2001)" value="2001" required>
+        </div>
+        <div class="form-group">
+            <input name="start_of_fade_out" type="number" step="0.1" class="searchTerm" 
+                   placeholder="Start of Fade Out (seconds, e.g., 275.5)" value="275.5" required>
+        </div>
+        <button type="submit" class="searchButton">Predict</button>
+    </form>
+
+    <div class="result">
+        {% if response is not none %}
+            <h2>Prediction: 
+                {% if response == 1 %}
+                    <span class="success">This song is likely to be popular! 🎉</span>
+                {% else %}
+                    <span class="failure">This song might not be popular. 😕</span>
+                {% endif %}
+            </h2>
+        {% else %}
+            <h2>Enter values above to predict song popularity</h2>
+        {% endif %}
+        {% if error %}
+            <h3 class="error">Error: {{ error }}</h3>
+        {% endif %}
+    </div>
+</div>
+</body>
+</html>

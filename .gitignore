@@ -1,0 +1,50 @@
+# Virtual environment
+venv/
+env/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.ipynb_checkpoints/
+
+# Model file (large/sensitive)
+cat_model.pkl
+
+# Environment variables and secrets
+.env
+*.env
+*.secret
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Build and distribution
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Coverage and testing
+.coverage
+htmlcov/
+.tox/
+.pytest_cache/
+
+# Jupyter notebooks (if any)
+*.ipynb

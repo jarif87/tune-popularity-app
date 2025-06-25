@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a3d 0%, #2c2c54 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap {
+    max-width: 600px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    margin: 2rem;
+}
+
+h1 {
+    color: #2c2c54;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.searchTerm {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #4e4e8e;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.searchTerm:focus {
+    outline: none;
+    border-color: #6b6bd4;
+    box-shadow: 0 0 8px rgba(107, 107, 212, 0.3);
+}
+
+.searchButton {
+    width: 100%;
+    padding: 12px;
+    background: #6b6bd4;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.searchButton:hover {
+    background: #4e4e8e;
+    transform: translateY(-2px);
+}
+
+.result {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+h2 {
+    color: #2c2c54;
+    font-size: 1.5rem;
+}
+
+.success {
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+.failure {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.error {
+    color: #e74c3c;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .wrap {
+        padding: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .searchTerm,
+    .searchButton {
+        font-size: 0.9rem;
+    }
+}
