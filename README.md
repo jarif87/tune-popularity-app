@@ -1,6 +1,5 @@
 # Song Popularity Prediction Web App
 
-![Project Banner](images/banner.png)
 
 A Flask-based web application to predict song popularity using a CatBoost machine learning model. Users can input five song features—`artist_familiarity`, `artist_hotttnesss`, `song_hotttnesss`, `year`, and `start_of_fade_out`—to determine if a song is likely to be popular.
 
